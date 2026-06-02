@@ -27,7 +27,7 @@ The task is to review the provided Sigma rule and answer questions about how it 
 
 Rule file: `C:\Users\LetsDefend\Desktop\ChallengeFile\proc_creation_win_bitsadmin_download.yml`
 
-![Sigma rule opened in Notepad](/img/learn-sigma/01-rule-notepad.png)
+![Sigma rule opened in Notepad](/img/learn-sigma/rule-notepad.png)
 
 ## Anatomy of a Sigma rule
 
@@ -45,7 +45,7 @@ screen, as the lab's copy may differ slightly from the upstream SigmaHQ rule.
 
 ## Q1. Which executable file does this rule target?
 
-Opening the file, the ![Sigma rule opened in Notepad](/img/learn-sigma/2026-06-02_14-02.png) block matches on the image name. The rule targets
+Opening the file, the `selection_img` block matches on the image name. The rule targets
 `bitsadmin.exe`.
 
 ## Q2. Which command-line option indicates a file transfer?
