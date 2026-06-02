@@ -1,2 +1,2 @@
-# ZviarBlue.github.io
+# ZviarCyber.github.io
 Writeup Labs
