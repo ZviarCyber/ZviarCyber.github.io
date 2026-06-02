@@ -56,7 +56,7 @@ transfer: the `/transfer` option.
 The `condition` line ties the image match and the command-line match together:
 
 ```yaml
-condition: selection_img and 1 of selection_cli_*)
+condition: selection_img and (selection_cmd or all of selection_cli_*)
 ```
 
 It reads as: the process must be `bitsadmin.exe` **and** at least one of the command-line
