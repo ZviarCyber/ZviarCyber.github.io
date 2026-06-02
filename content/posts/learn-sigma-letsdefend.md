@@ -55,8 +55,8 @@ the exact command the attacker ran.
 
 ## Q5. Which single ATT&CK tactic tag is listed first?
 
-In the `tags` section, the first tactic listed is `attack.defense_evasion` (Defense Evasion).
-*(verify the ordering in your file)* Bitsadmin/BITS abuse maps to **T1197 — BITS Jobs**, used
+In the `tags` section, the first tactic listed is `attack.defense_evasion` (Defense Evasion). 
+Bitsadmin/BITS abuse maps to **T1197 — BITS Jobs**, used
 for both defense evasion and persistence, which is why both tactics appear in the tags.
 
 ## Q6. What is the primary category of events this rule monitors?
@@ -67,7 +67,7 @@ inspects newly created processes.
 ## Q7. Which command-line argument identifies HTTP-based downloads?
 
 `selection_cli_2` targets the command line used for the download. To catch HTTP/HTTPS
-downloads it looks for `http` in the command line. *(verify the exact string in your file)*
+downloads it looks for `http` in the command line.
 
 ## Q8. Which command-line option must be present to create a new transfer?
 
