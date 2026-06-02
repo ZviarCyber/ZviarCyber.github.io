@@ -1,0 +1,25 @@
+baseURL = "https://ZviarBlue.github.io/"
+languageCode = "en-us"
+title = "Blue Team Write-ups"
+ 
+[module]
+  [[module.imports]]
+    path = "github.com/adityatelange/hugo-PaperMod"
+ 
+[params]
+  defaultTheme = "auto"
+  ShowReadingTime = true
+  ShowToc = true
+  TocOpen = false
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowPostNavLinks = true
+ 
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+ 
+[[menu.main]]
+  name = "Write-ups"
+  url = "/posts/"
+  weight = 1
+ 
