@@ -45,8 +45,7 @@ The `condition` line ties the image match and the command-line match together:
 condition: selection_img and (selection_cmd or all of selection_cli_*)
 ```
 
-It reads as: the process must be `bitsadmin.exe` **and** at least one of the command-line
-selections must match.
+the process must be bitsadmin.exe and either /transfer is present or all of the selection_cli_* groups match.
 
 ## Q4. Which field does the rule capture to show the command being executed?
 
