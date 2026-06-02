@@ -25,7 +25,7 @@ The task is to review the provided Sigma rule and answer questions about how it 
 
 Rule file: `C:\Users\LetsDefend\Desktop\ChallengeFile\proc_creation_win_bitsadmin_download.yml`
 
-![Sigma rule opened in Notepad](/img/learn-sigma/01-rule-notepad.png)
+![Sigma rule opened in Notepad](/img/learn-sigma/rule-notepad.png)
 
 ## Anatomy of a Sigma rule
 
