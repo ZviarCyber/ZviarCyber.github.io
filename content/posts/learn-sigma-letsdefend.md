@@ -45,7 +45,7 @@ screen, as the lab's copy may differ slightly from the upstream SigmaHQ rule.
 
 ## Q1. Which executable file does this rule target?
 
-Opening the file, the <img width="658" height="598" alt="2026-06-02_14-02" src="https://github.com/user-attachments/assets/6653eee7-4f12-418f-a07b-61a82d6b0cfd" /> block matches on the image name. The rule targets
+Opening the file, the ![Sigma rule opened in Notepad](/img/learn-sigma/2026-06-02_14-02.png) block matches on the image name. The rule targets
 `bitsadmin.exe`.
 
 ## Q2. Which command-line option indicates a file transfer?
