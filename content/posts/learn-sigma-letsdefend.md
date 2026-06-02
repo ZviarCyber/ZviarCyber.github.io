@@ -59,8 +59,6 @@ The `condition` line ties the image match and the command-line match together:
 condition: selection_img and 1 of selection_cli_*)
 ```
 
-*(verify — copy the exact condition line from your file)*
-
 It reads as: the process must be `bitsadmin.exe` **and** at least one of the command-line
 selections must match.
 
