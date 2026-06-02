@@ -27,20 +27,6 @@ Rule file: `C:\Users\LetsDefend\Desktop\ChallengeFile\proc_creation_win_bitsadmi
 
 ![Sigma rule opened in Notepad](/img/learn-sigma/rule-notepad.png)
 
-## Anatomy of a Sigma rule
-
-Sigma is a generic, vendor-agnostic format for detection logic. The same rule can be converted
-into a query for any SIEM (Splunk, ELK, Microsoft Sentinel). The sections that matter here:
-
-- `logsource` — the telemetry the rule reads (e.g. Windows process creation).
-- `detection` / `selection_*` — the individual conditions to match (a field contains a value).
-- `condition` — the logical expression that combines the selections to fire the rule.
-- `fields` — the data points surfaced to the analyst when the rule triggers.
-- `tags` — references, usually MITRE ATT&CK tactics and techniques.
-
-A few answers below are marked *(verify)* — confirm them against the exact `.yml` open on your
-screen, as the lab's copy may differ slightly from the upstream SigmaHQ rule.
-
 ## Q1. Which executable file does this rule target?
 
 Opening the file, the `selection_img` block matches on the image name. The rule targets
