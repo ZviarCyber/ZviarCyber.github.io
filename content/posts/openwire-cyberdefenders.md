@@ -23,15 +23,6 @@ execution on the OpenWire port, through a malicious Spring XML payload that abus
 
 **Tool used:** Wireshark.
 
-## The attack in one paragraph
-
-The public server runs Apache ActiveMQ, exposed on TCP `61616` (the OpenWire protocol). The
-attacker exploits **CVE-2023-46604**: a crafted OpenWire packet forces the broker to instantiate
-a Spring `ClassPathXmlApplicationContext`, which fetches a remote XML file (`invoice.xml`) from the
-first C2. That XML defines a bean that invokes `java.lang.ProcessBuilder` to run commands, drops a
-reverse shell binary disguised as `docker`, and beacons out to a second C2. Two C2 servers, one
-CVE, one legitimate service turned into an entry point.
-
 ## Investigation
 
 ### Q1. What is the IP of the C2 server that communicated with our server?
