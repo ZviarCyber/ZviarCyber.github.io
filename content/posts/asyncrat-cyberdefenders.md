@@ -5,14 +5,6 @@ tags: ["malware-analysis", "asyncrat", "deobfuscation", "cyberchef", "dnspy", "b
 categories: ["Write-up", "CyberDefenders"]
 ---
 
-## Abstract
-
-A malware analysis walkthrough of the CyberDefenders **AsyncRAT** challenge (Medium). Starting
-from a malicious JavaScript attachment, I peel back a multi-stage loader: an obfuscated PowerShell
-script, a second-stage PE hidden inside a PNG, a registry persistence key stored in reverse, and a
-third stage pulled from another image. The whole point is following the obfuscation chain stage by
-stage rather than trying to read it all at once.
-
 ## Scenario
 
 > You are a cybersecurity analyst at Globex Corp. An employee opened an email attachment claiming
@@ -24,15 +16,6 @@ stage rather than trying to read it all at once.
 ![Scenario](/img/asyncrat/01-scenario.png)
 
 **Tools used:** [obf-io.deobfuscate.io](https://obf-io.deobfuscate.io/), [CyberChef](https://gchq.github.io/CyberChef/), DnSpy, the browser console, and PowerShell `Get-FileHash`.
-
-## The loader chain at a glance
-
-A JavaScript attachment runs an obfuscated PowerShell script whose payload is hidden in a single
-variable. Deobfuscating it reveals a URL to a PNG that secretly contains a base64-encoded PE (stage
-two), marked off by a `<<BASE64_START>>` tag. That stage establishes persistence through a registry
-Run key (stored reversed to hide it) and then reaches out to a second PNG for stage three, another
-embedded PE. Two payloads, several layers of obfuscation, one image-steganography trick reused
-twice.
 
 ## Investigation
 
